@@ -1,0 +1,41 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+
+    /* colors */
+
+    --green-1: #1aab00;
+    --green-2: #0b4f00;
+    /* --light-mode: #f9fafe;
+    --tr-light-mode: #f9fafe8d; */
+    --light-mode: #e4e4e4;
+    --tr-light-mode: #e4e4e48d;
+    --grey-1: #cdcdcd;
+    --grey-2: #333333;
+    --grey-3: #8d9295;
+    --grey-4: #a4a4a4;
+    --grey-5: #444444;
+    --grey-6: #555555;
+    --grey-black-1: #121212;
+    --dark-mode: #1d1d1d;
+    --tr-dark-mode: #1d1d1d8e;
+
+    /* fonts */
+    --font-1: Menlo;
+    --font-2: monospace;
+    --font-3: 'Courier New', Courier, monospace;
+    --font-4: Arial;
+    --font-5: Helvetica;
+    --font-6: sans-serif;
+    --font-7: Courier;
+    --regular-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-8: miltown;
+    --font-9: marker felt;
+
+}
+

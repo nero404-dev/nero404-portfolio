@@ -1,0 +1,203 @@
+.body {
+    background-color: var(--light-mode);
+}
+
+.dark-mode .body {
+    background-color: var(--dark-mode);
+}
+
+header {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+header .back-btn {
+    padding: 10px 0;
+}
+
+header .back-btn a button {
+    text-decoration: none;
+}
+
+header .adjust-btn {
+    padding: 10px 0;
+}
+
+header .header-btns button {
+    padding: 5px 20px;
+    background-color: var(--grey-1);
+    border: 1px solid var(--green-2);
+    color: var(--green-2);
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+.dark-mode header .header-btns button {
+    background-color: transparent;
+    color: var(--grey-1);
+}
+
+header .header-btns button:hover {
+    border: 1px solid var(--green-1);
+}
+
+#shadow_hr {
+    background-color: var(--grey-4); /* #a4a4a4 */
+    height: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    margin: 0 0 30px 0;
+}
+
+.dark-mode #shadow_hr {
+    background-color: var(--dark-mode);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.709); /* Shadow for dark mode */
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+main h1 {
+    width: fit-content;
+    margin: 50px auto;
+    color: var(--green-2);
+    padding-left: 5px;
+    border-left: 3px solid var(--green-1);
+    font-size: 32px;
+    text-align: center;
+}
+
+.dark-mode main h1 {
+    color: var(--grey-1);
+}
+
+#searchResult {
+    text-align: center;
+    color: var(--grey-2);
+}
+
+.dark-mode #searchResult {
+    color: var(--grey-3);
+}
+
+.courses {
+    padding: 30px 0;
+}
+
+.courses h2 {
+    margin: 30px 0;
+    color: var(--green-2);
+    padding-bottom: 5px;
+    border-bottom: 3px solid var(--green-1);
+    font-size: 26px;
+}
+
+.dark-mode .courses h2 {
+    color: var(--grey-1);
+}
+
+.courses .image {
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.courses .image img {
+    width: 100%;
+    height: 100%;
+}
+
+.courses h3 a {
+    text-decoration: underline;
+    color: var(--grey-2);
+    transition: 0.3s;
+}
+
+.courses h3 a:hover {
+    color: var(--green-2);
+}
+
+.dark-mode .courses h3 a {
+    color: var(--grey-3);
+}
+
+.dark-mode .courses h3 a:hover {
+    color: var(--green-1);
+}
+
+.courses h3 a .fa {
+    padding-right: 5px;
+    color: var(--green-1);
+}
+
+.courses p {
+    color: var(--grey-2);
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.dark-mode .courses p {
+    color: var(--grey-3);
+}
+
+/* <---> */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    /* left: 50%;
+    transform: translate(-50%, -50%); */
+    right: 5%;
+    transform: translate(0%, -15%);
+    text-align: center;
+    background-color: var(--tr-light-mode);
+    padding: 0 10px;
+}
+
+.dark-mode footer {
+    background-color: var(--tr-dark-mode);
+}
+
+footer .copyright {
+    text-align: center;
+}
+
+footer .copyright p {
+    color: var(--grey-2);
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.dark-mode footer .copyright p {
+    color: var(--grey-3);
+}
+
+footer .copyright p .fa {
+    padding-right: 3px;
+}
+
+footer .top-btn {
+    padding: 5px;
+}
+
+footer .top-btn a {
+    color: var(--grey-2);
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.dark-mode footer .top-btn a {
+    color: var(--grey-3);
+}
+
+footer .top-btn a:hover {
+    color: var(--green-1);
+}
+
+@media screen and (max-width: 414px) {
+    .courses .image {
+        width: 100%;
+    }
+}

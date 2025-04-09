@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Nero's Website ~ nero404</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="pictures/2-colored-cropped-white_bg-bordered.png">
+</head>
+<body>
+    <div class="body">
+        <!-- header -->
+        <header>
+            <!-- Navigation Bar -->
+            <nav>
+                <div class="col-1">
+                    <div class="logo logo-LM">
+                        <a href="index.html"><img src="pictures/2-colored-cropped_copy.png"></a>
+                    </div>
+                    <div class="logo logo-DM">
+                        <a href="index.html"><img src="pictures/2-colored-cropped_copy-2.png"></a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#plans">Plans</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li>
+                            <div class="adjust-btn">
+                                <button id="theme-toggle" onclick="toggleLogo()">Switch to Dark Mode</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="resp-col-2">
+                    <div class="logo resp-logo-LM">
+                        <a href="index.html"><img src="pictures/4-colored-cropped_copy.png"></a>
+                    </div>
+                    <div class="logo resp-logo-DM">
+                        <a href="index.html"><img src="pictures/4-colored-cropped_copy-2.png"></a>
+                    </div>
+                    <div class="dashes">
+                        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                    </div>
+                </div>
+            </nav>
+    
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#plans">Plans</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#skills">Skills</a>
+                <!-- <a href="#contact">Contact</a> -->
+        
+                <hr id="resp-hr">
+        
+                <div class="nav-icons">
+                    <a href="https://www.instagram.com/nero404_dev/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://github.com/nero404-dev/"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <!-- <a href="https://www.youtube.com"><i class="fa fa-youtube-play" aria-hidden="true"></i></a> -->
+                </div>
+    
+                <div class="adjust-btn">
+                    <button id="resp-theme-toggle" onclick="respToggleLogo()">Switch to Dark Mode</button>
+                </div>
+            </div>
+    
+            <div id="shadow_hr"></div>
+    
+            <div class="intro container">
+                <div class="content__container">
+                    <h1>
+                        Hello, I am<br>
+                        <span class="heading-2">Nero ~ nero404</span><br>
+                        <span class="heading-3">Web Developer <i class="fa fa-code" aria-hidden="true"></i></span>
+                    </h1>
+                    <p>
+                        As a <b>Front-End Web Developer</b>, I specialize in crafting engaging and responsive user interfaces using <u>HTML,
+                            CSS, & JavaScript</u>. My passion lies in bringing designs to life and ensuring seamless user experiences across
+                        devices. <br> Let's create beautiful and functional web applications together! 
+                    </p>
+                    <form id="searchForm">
+                        <input type="text" id="searchInput" placeholder="Browse projects.. " required>
+                        <button type="submit">Search Project</button>
+                    </form>
+                </div>
+                <div class="image__container">
+                    <img src="pictures/coding-image-1.png" alt="header">
+                    <img src="pictures/coding-image-2.png" alt="header">
+    
+                    <div class="image__content">
+                        <ul>
+                            <li>Get <u>30%</u> off on <b>1st</b> month</li>
+                            <li>Then <u>60%</u> off on <b>2nd</b> month</li>
+                            <li>So <u>20%</u> off on <b>3rd</b> month</li>
+                            <li>Affordable Pricing Plans</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- main -->
+    <main>
+        <section class="about" id="about">
+            <div class="col-1">
+                <div class="image">
+                    <img src="pictures/IMG_6807.JPG">
+                </div>
+            </div>
+            <div class="col-2">
+                <h1>About</h1>
+                <p><span>Nero</span>, I am a freelance front-end web developer with a strong focus on HTML, CSS, and JavaScript. My
+                    journey into the world of coding began with a fascination for design, which evolved into a passion for building
+                    interactive and user-friendly websites. I take pride in crafting my own unique designs, preferring to avoid
+                    frameworks to keep my work original and tailored to each project. With a solid engineering background in
+                    programming, I am constantly exploring new techniques and technologies to enhance my skill set. My goal is to create
+                    visually appealing and functional web applications that resonate with users. <br><br>
+                    With a keen eye for detail and a commitment to quality, I thrive on challenges that push my creative boundaries. I
+                    believe that effective communication and collaboration are essential in the development process, and I enjoy working
+                    closely with clients to bring their visions to life. As I venture into the mobile application world, I am excited to
+                    expand my horizons and continue growing as a developer. Together, we can create innovative solutions that make a lasting
+                    impact! 
+                </p>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <h1>Services<br><span>Contact for Prices..</span></h1>
+            <div class="cats">
+                <div class="cat">
+                    <h3>Main Services</h3>
+                    <div class="checked">
+                        <div class="col"><div class="left"><h4>Custom Web Development</h4><p>Tailored solutions to create responsive and engaging websites. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                        <div class="col"><div class="left"><h4>User Interface Design </h4><p>Crafting intuitive designs that enhance user experience. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                        <div class="col"><div class="left"><h4>Website Maintenance </h4><p>Ongoing support to ensure your site runs smoothly. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                    </div>
+                    <div class="contact">
+                        <a href="tel:+96176134251"><button>Call <i class="fa fa-phone" aria-hidden="true"></i></button></a>
+                        <a href="mailto:nero404.developer@gmail.com"><button>Email <i class="fa fa-envelope" aria-hidden="true"></i></button></a>
+                    </div>
+                </div>
+
+                <div class="cat">
+                    <h3>Additional Services</h3>
+                    <div class="checked">
+                        <div class="col"><div class="left"><h4>Performance Optimization </h4><p>Improving website speed and efficiency for better user engagement. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                        <div class="col"><div class="left"><h4>Consultation Services </h4><p>Offering expert advice on best practices in web development. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                        <div class="col"><div class="left"><h4>SEO Implementation </h4><p>Enhancing your site's visibility on search engines through effective strategies. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                    </div>
+                    <div class="contact">
+                        <a href="tel:+96176134251"><button>Call <i class="fa fa-phone" aria-hidden="true"></i></button></a>
+                        <a href="mailto:nero404.developer@gmail.com"><button>Email <i class="fa fa-envelope" aria-hidden="true"></i></button></a>
+                    </div>
+                </div>
+
+                <div class="cat">
+                    <h3>Specialized Programs</h3>
+                    <div class="checked">
+                        <!-- <div class="col"><div class="left"><h4>Mobile Application Development </h4><p>Creating user-friendly mobile apps for diverse platforms. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div> -->
+                        <div class="col"><div class="left"><h4>Project Collaboration </h4><p>Partnering on projects to deliver innovative and effective solutions. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                        <div class="col"><div class="left"><h4>Workshops & Training </h4><p>Providing hands-on sessions to enhance your team's web development skills. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                        <div class="col"><div class="left"><h4>Code Review Services </h4><p>Thorough assessments to ensure code quality and best practices. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                    </div>
+                    <div class="contact">
+                        <a href="tel:+96176134251"><button>Call <i class="fa fa-phone" aria-hidden="true"></i></button></a>
+                        <a href="mailto:nero404.developer@gmail.com"><button>Email <i class="fa fa-envelope" aria-hidden="true"></i></button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr id="hr-between">
+
+        <section class="plans" id="plans">
+            <h1>Pricing Plans</h1>
+            <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('news')"> Monthly</button>
+                <button class="btn active_2" onclick="filterSelection('events')"> Annually</button>
+            </div>
+              
+            <!-- Portfolio Gallery Grid -->
+            <div class="row">
+                <div class="column news">
+                    <h2>Monthly Pricing Plans</h2>
+        
+                    <div class="news_content">
+                        <div class="cat">
+                            <h3>Basic Plan</h3>
+                            <h4>Starter Package <span>$160 + $100/mo</span></h4>
+                            <ul>
+                                <li>Custom Web Development: <span>$100 (once)</span></li>
+                                <li>User Interface Design: <span>$60 (once)</span></li>
+                                <li>Website Maintenance: <span>$100/month</span></li>
+                            </ul>
+                        </div>
+            
+                        <div class="cat">
+                            <h3>Standard Plan</h3>
+                            <h4>Professional Package <span>$400 + $150/mo</span></h4>
+                            <ul>
+                                <li>Custom Web Development: <span>$120 (once)</span></li>
+                                <li>User Interface Design: <span>$80 (once)</span></li>
+                                <li>Website Maintenance: <span>$150/month</span></li>
+                                <li>Performance Optimization: <span>$200 (once)</span></li>
+                            </ul>
+                        </div>
+            
+                        <div class="cat">
+                            <h3>Premium Plan</h3>
+                            <h4>Ultimate Package <span>$760 + $200/mo</span></h4>
+                            <ul>
+                                <li>Custom Web Development: <span>$160 (once)</span></li>
+                                <li>User Interface Design: <span>$100 (once)</span></li>
+                                <li>Website Maintenance: <span>$200/month</span></li>
+                                <li>Performance Optimization: <span>$260 (once)</span></li>
+                                <li>SEO Implementation: <span>$240 (once)</span></li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                </div>
+            
+            
+                <div class="column events">
+                    <h2>Annually Pricing Plans</h2>
+        
+                    <div class="events_content">
+                        <div class="cat">
+                            <h3>Basic Plan</h3>
+                            <h4>Starter Package <span>$160 + $1k/y</span></h4>
+                            <ul>
+                                <li>Custom Web Development: <span>$100 (once)</span></li>
+                                <li>User Interface Design: <span>$60 (once)</span></li>
+                                <li>Website Maintenance: <span>$1,000/year</span></li>
+                            </ul>
+                        </div>
+            
+                        <div class="cat">
+                            <h3>Standard Plan</h3>
+                            <h4>Professional Package <span>$400 + $1.5k/y</span></h4>
+                            <ul>
+                                <li>Custom Web Development: <span>$120 (once)</span></li>
+                                <li>User Interface Design: <span>$80 (once)</span></li>
+                                <li>Website Maintenance: <span>$1,500/year</span></li>
+                                <li>Performance Optimization: <span>$200 (once)</span></li>
+                            </ul>
+                        </div>
+            
+                        <div class="cat">
+                            <h3>Premium Plan</h3>
+                            <h4>Ultimate Package <span>$760 + $2k/y</span></h4>
+                            <ul>
+                                <li>Custom Web Development: <span>$160 (once)</span></li>
+                                <li>User Interface Design: <span>$100 (once)</span></li>
+                                <li>Website Maintenance: <span>$2,000/year</span></li>
+                                <li>Performance Optimization: <span>$260 (once)</span></li>
+                                <li>SEO Implementation: <span>$240 (once)</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="courses" id="portfolio">
+            <h1>Portfolio</h1>
+            <p>Welcome to my portfolio! As a passionate front-end web developer, I specialize in creating visually stunning and
+                highly functional websites using HTML, CSS, and JavaScript. My goal is to deliver exceptional user experiences while
+                maintaining a strong focus on design and performance. Explore, Browse, and Inspect the experience of my work and see
+                how I can help bring your ideas to life! </p>
+            <ul>
+                <li>Custom web development tailored to your needs. </li>
+                <li>Responsive designs that look great on any device. </li>
+                <li>Ongoing website maintenance and support. </li>
+                <li>Collaboration to ensure your vision is realized. </li>
+            </ul>
+            <div class="view-btn">
+                <a href="portfolio.html"><button>View Projects<i class="fa fa-chevron-right" aria-hidden="true"></i></button></a>
+            </div>
+        </section>
+
+        <section class="skills" id="skills">
+            <h1>Skills</h1>
+            <div class="cats">
+                <div class="cat">
+                    <div class="skill-name">HTML</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="74%" style="max-width: 74%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cats">
+                <div class="cat">
+                    <div class="skill-name">CSS</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="87%" style="max-width: 87%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cats">
+                <div class="cat">
+                    <div class="skill-name">JS</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="46%" style="max-width: 46%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cats">
+                <div class="cat">
+                    <div class="skill-name">Lightroom</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="63%" style="max-width: 63%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cats">
+                <div class="cat">
+                    <div class="skill-name">PhotoShop</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="35%" style="max-width: 35%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cats">
+                <div class="cat">
+                    <div class="skill-name">VideoLeap</div>
+                    <div class="skill-bar">
+                        <div class="skill-per" per="82%" style="max-width: 82%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer id="contact">
+        <div class="footer-logo">
+            <a href="index.html"><img src="pictures/2-colored-cropped-white_bg-bordered.png"></a>
+        </div>
+
+        <div class="row-2">
+            <div class="col col-1">
+                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> Navigation</h3>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#plans">Plans</a></li>
+                    <li><a style="text-decoration: underline;" href="portfolio.html">Portfolio</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                </ul>
+            </div>
+            <div class="col col-2">
+                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> The Quote</h3>
+                <p>Programmer: A machine that turns <br>coffee into code. <i class="fa fa-coffee" aria-hidden="true"></i><br><br>~ Anonymous</p>
+            </div>
+            <div class="col col-3">
+                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> Contact Info</h3>
+                <p><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:+96176134251">+961 76 134 251</a></p>
+                <p><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:nero404.developer@gmail.com">nero404.developer@gmail.com</a></p>
+            </div>
+            <div class="col col-4">
+                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> Socials</h3>
+                <div class="socials">
+                    <a href="https://www.instagram.com/nero404_dev/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://github.com/nero404-dev/"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <!-- <a href="https://www.youtube.com"><i class="fa fa-youtube-play" aria-hidden="true"></i></a> -->
+                </div>
+            </div>
+        </div>
+
+        <hr id="footer-hr">
+
+        <div class="copyright">
+            <p>Designed & Developed By "Samer Trh" <br><i class="fa fa-copyright" aria-hidden="true"></i> 2025 | All Rights Reserved</p>
+        </div>
+    </footer>
+
+        
+
+    <!-- js resp nav -->
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "90%";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+    <!-- adjust light -> dark mode -->
+    <script>
+        // Select the toggle button
+        const themeToggleButton = document.getElementById('theme-toggle');
+
+        // Add an event listener to the button
+        themeToggleButton.addEventListener('click', () => {
+            // Toggle the 'dark-mode' class on the body
+            document.body.classList.toggle('dark-mode');
+
+            // Update the button text based on the current mode
+            if (document.body.classList.contains('dark-mode')) {
+                themeToggleButton.textContent = 'Switch to Light Mode';
+            } else {
+                themeToggleButton.textContent = 'Switch to Dark Mode';
+            }
+        });
+    </script>
+
+    <!-- adjust light -> dark mode for resp -->
+    <script>
+        // Select the toggle button
+        const respThemeToggleButton = document.getElementById('resp-theme-toggle');
+
+        // Add an event listener to the button
+        respThemeToggleButton.addEventListener('click', () => {
+            // Toggle the 'dark-mode' class on the body
+            document.body.classList.toggle('dark-mode');
+
+            // Update the button text based on the current mode
+            if (document.body.classList.contains('dark-mode')) {
+                respThemeToggleButton.textContent = 'Switch to Light Mode';
+            } else {
+                respThemeToggleButton.textContent = 'Switch to Dark Mode';
+            }
+        });
+    </script>
+
+    <!-- js intro switch images/divs -->
+    <script>
+        // Select the "1st" and "2nd" divs
+        const firstDiv = document.querySelector('.logo-LM');
+        const secondDiv = document.querySelector('.logo-DM');
+
+        // Initially show the "1st" div and hide the "2nd" div
+        firstDiv.style.display = 'block';
+        secondDiv.style.display = 'none';
+
+        // Function to toggle between the two divs
+        function toggleLogo() {
+            if (firstDiv.style.display === 'block') {
+                firstDiv.style.display = 'none';
+                secondDiv.style.display = 'block';
+            } else {
+                firstDiv.style.display = 'block';
+                secondDiv.style.display = 'none';
+            }
+        }
+
+        // Set an interval to switch every 5 seconds
+        // setInterval(toggleDivs, 5000);
+    </script>
+
+    <!-- js intro switch images/divs -->
+    <script>
+        // Select the "1st" and "2nd" divs
+        const firstRespDiv = document.querySelector('.resp-logo-LM');
+        const secondRespDiv = document.querySelector('.resp-logo-DM');
+
+        // Initially show the "1st" div and hide the "2nd" div
+        firstRespDiv.style.display = 'block';
+        secondRespDiv.style.display = 'none';
+
+        // Function to toggle between the two divs
+        function respToggleLogo() {
+            if (firstRespDiv.style.display === 'block') {
+                firstRespDiv.style.display = 'none';
+                secondRespDiv.style.display = 'block';
+            } else {
+                firstRespDiv.style.display = 'block';
+                secondRespDiv.style.display = 'none';
+            }
+        }
+
+        // Set an interval to switch every 5 seconds
+        // setInterval(toggleDivs, 5000);
+    </script>
+
+    <!-- js search -->
+    <script>
+        // JavaScript to handle the form submission
+        document.getElementById('searchForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the default form submission
+            const query = document.getElementById('searchInput').value.trim(); // Get the search input value
+            if (query) {
+                // Redirect to portfolio.html with the search query
+                window.location.href = `portfolio.html?search=${encodeURIComponent(query)}`;
+            } else {
+                alert("Please enter a search term!"); // Alert if the input is empty
+            }
+        });
+    </script>
+
+    <!-- js pricing plans -->
+    <script>
+        filterSelection("news")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", " ");
+                this.className += " active";
+            });
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current_2 = document.getElementsByClassName("active_2");
+                current_2[0].className = current_2[0].className.replace(" active_2", " ");
+                this.className += " active_2";
+            });
+        }
+    </script>
+
+    </div>
+</body>
+</html>

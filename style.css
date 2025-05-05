@@ -998,6 +998,7 @@ body {
         width: 30%;
     }
     .project-description {
+        display: none;
         max-height: 8rem;
         opacity: 1;
     }

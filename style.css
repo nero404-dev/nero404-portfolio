@@ -40,6 +40,14 @@ html {
     font-size: 16px;
 }
 
+@font-face {
+    font-family: 'Menlo';
+    src: url('path/to/menlo.woff2') format('woff2'),
+         url('path/to/menlo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: 'Menlo', monospace;
     background-color: var(--background);

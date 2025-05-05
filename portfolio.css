@@ -20,6 +20,16 @@ header .back-btn a button {
     text-decoration: none;
 }
 
+header .back-btn a button .fa {
+    font-size: 16px;
+    padding-right: 5px;
+    transition: 0.3s;
+}
+
+header .back-btn a button:hover .fa {
+    color: var(--green-1);
+}
+
 header .adjust-btn {
     padding: 10px 0;
 }

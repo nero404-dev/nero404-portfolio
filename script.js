@@ -37,7 +37,7 @@ const mobileMenuLinks = document.querySelectorAll('.mobile-nav-link');
 const hamburger = document.querySelector('.hamburger').querySelectorAll('span');
 const typingTextElement = document.getElementById('typing-text');
 const cursor = document.querySelector('.cursor');
-const currentYearElement = document.getElementById('current-year');
+// const currentYearElement = document.getElementById('current-year');
 const skillBars = document.querySelectorAll('.skill-progress');
 const aboutText = document.querySelector('.about-text');
 const skillsContainer = document.querySelector('.skills-container');
@@ -49,7 +49,7 @@ const submitButton = document.getElementById('submit-btn');
 const toastContainer = document.getElementById('toast-container');
 
 // Variables
-const roles = ["Web Developer", "Front-End Dev","Designer", "Creator", "Programmer", "01 lover", "Green lover"];
+const roles = ["Web Developer", "Front-End Dev","Designer", "Creator", "Programmer", "01's lover", "Green lover"];
 let currentRoleIndex = 0;
 let displayText = "";
 let isTyping = true;
@@ -59,7 +59,7 @@ let isVisible = false;
 // Initialize the page
 function init() {
   // Set current year in the footer
-  currentYearElement.textContent = new Date().getFullYear();
+  // currentYearElement.textContent = new Date().getFullYear();
   
   // Start the typing animation
   setTimeout(typeText, 1000);

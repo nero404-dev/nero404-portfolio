@@ -1068,6 +1068,7 @@ body {
 .contact-info-p {
     color: var(--muted-foreground);
     margin-bottom: 0.5rem;
+    font-size: 0.875rem;
     font-family: monospace;
 }
 
@@ -1144,6 +1145,7 @@ body {
 
 .contact-form {
     padding: 1.5rem;
+    margin: auto 0;
     border-radius: 0.75rem;
     border: 1px solid #1aab0033;
     backdrop-filter: blur(4px);
@@ -1165,6 +1167,7 @@ body {
     font-size: 0.875rem;
     font-weight: 500;
     margin-bottom: 0.5rem;
+    color: var(--muted-foreground);
 }
 
 .form-group input,
@@ -1191,7 +1194,7 @@ body {
     padding: 0.75rem;
     border-radius: 0.5rem;
     background-color: var(--accent);
-    color: var(--primary-foreground);
+    color: var(--muted-foreground);
     font-weight: 600;
     font-size: 14px;
     font-family: monospace;

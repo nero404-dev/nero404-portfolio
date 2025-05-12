@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Nero's Portfolio ~ nero404</title>
+    <meta name="description" content="Professional web developer and designer portfolio" />
+    <meta name="author" content="nero404" />
+
+    <meta property="og:title" content="Nero's Portfolio" />
+    <meta property="og:description" content="Professional web developer and designer portfolio" />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" /> -->
+
+    <!-- <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@shadowcraft" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" /> -->
+
+    <!-- Google Fonts -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"> -->
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="pictures/2-colored-cropped-white_bg-bordered.png">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "La0A2Lpjt-7e2OyxQ",
+            });
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar">
+        <div class="container">
+            <a href="#hero" class="logo">nero<span>404</span></a>
+
+            <!-- Desktop Navigation -->
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button" onclick="openNav()" aria-label="Toggle menu">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <!-- <div class="mobile-menu">
+        <div class="mobile-menu-links">
+          <a href="#hero" class="mobile-nav-link">Home</a>
+          <a href="#about" class="mobile-nav-link">About</a>
+          <a href="#projects" class="mobile-nav-link">Projects</a>
+          <a href="#contact" class="mobile-nav-link">Contact</a>
+        </div>
+      </div> -->
+    </nav>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!-- <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#plans">Plans</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a> -->
+
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+
+        <hr id="resp-hr">
+
+        <div class="nav-icons">
+            <a href="https://www.instagram.com/nero404_dev/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://github.com/nero404-dev/"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <!-- <a href="https://www.youtube.com"><i class="fa fa-youtube-play" aria-hidden="true"></i></a> -->
+        </div>
+
+        <hr id="resp-hr">
+
+        <div class="side-nav-logo">
+            <img src="pictures/2-colored-cropped_copy-2.png" alt="Nero's Logo">
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <!-- Background Elements -->
+        <div class="bg-elements">
+            <div class="bg-blob blob-1"></div>
+            <div class="bg-blob blob-2"></div>
+            <div class="bg-grid"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="container">
+            <div class="hero-content">
+                <img src="pictures/2-colored-cropped_copy-2.png" alt="Nero's Logo">
+                <p class="subtitle">Hello, my name is.. </p>
+                <h1 class="title">Nero ~ nero404</h1>
+                <div class="typing-container">
+                    <h2 class="dynamic-text">I'm a |<span id="typing-text"></span><span class="cursor"></span></h2>
+                </div>
+                <p class="description">
+                    Crafting digital experiences with code & creativity!
+                    Specialized in building modern, responsive web applications.
+                </p>
+
+                <div class="button-group">
+                    <a href="portfolio.html" class="button primary-button">View My Work</a>
+                    <a href="#contact" class="button secondary-button">Contact Me</a>
+                </div>
+            </div>
+
+            <!-- <div class="scroll-indicator">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 5V19M12 19L19 12M12 19L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div> -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <!-- Background Elements -->
+        <div class="bg-elements">
+            <div class="bg-blob blob-3"></div>
+        </div>
+
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Discover who I am and what drives my passion for web development and design. </p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Who I Am</h3>
+                    <p>
+                        I'm a passionate <b>Front-End Web Developer</b> and <u>designer</u> with a keen eye for creating beautiful,
+                        functional digital experiences. 
+                        With about 2 years of experience in the industry, I've worked on a diverse range of
+                        projects from small business websites to complex web applications.
+                    </p>
+                    <p>
+                        My approach combines technical expertise with creative thinking to solve problems and deliver
+                        exceptional results.
+                        I'm constantly learning new technologies and techniques to stay at the forefront of web
+                        development.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me exploring new design trends, contributing to open-source
+                        projects,
+                        or sharing my knowledge through tutorials and articles.
+                    </p>
+                </div>
+
+                <div class="skills-container">
+                    <h3>My Skills</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="90"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">CSS</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="85"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percentage">65%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="65"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">UI/UX Design</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="80"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Responsive</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="85"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">PhotoShop</span>
+                                <span class="skill-percentage">60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percentage="60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <!-- Background Elements -->
+        <div class="bg-elements">
+            <div class="bg-blob blob-4"></div>
+        </div>
+
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Projects</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Check out some of my recent work and creative endeavors. <br>Also, you might search for some specific projects! </p>
+            </div>
+
+            <form id="searchForm">
+                <input type="text" id="searchInput" placeholder="Search projects.. (e.g. store)" required>
+                <button type="submit">Search</button>
+            </form>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-overlay"></div>
+                    <img src="pictures/project-1.png" alt="Education"
+                        class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Education Platform</h3>
+                        <p class="project-description">
+                            Empower your learning journey with our innovative education platform, offering personalized courses and resources
+                            tailored to your needs.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML/CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Responsive Design</span>
+                        </div>
+                        <a href="https://nero404-dev.github.io/edu-web/"><button class="project-button">View Project</button></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-overlay"></div>
+                    <img src="pictures/project-10.png" alt="Watches"
+                        class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Watches Store</h3>
+                        <p class="project-description">
+                            Explore our exquisite collection of luxury watches, designed to elevate your style and sophistication. Discover
+                            timepieces that blend craftsmanship with innovation, perfect for every occasion!
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML/CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Responsive Design</span>
+                        </div>
+                        <a href="https://nero404-dev.github.io/pack-4-projects/watches.html"><button class="project-button">View Project</button></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-overlay"></div>
+                    <img src="pictures/project-11.png" alt="Coffee"
+                        class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Coffee Shop</h3>
+                        <p class="project-description">
+                            Indulge in the rich aromas and flavors of our artisanal coffee, crafted to awaken your senses. Join us in a cozy
+                            atmosphere where every cup tells a story and every sip is a moment of delight!
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML/CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Responsive Design</span>
+                        </div>
+                        <a href="https://nero404-dev.github.io/pack-3-projects/coffee_shop.html"><button class="project-button">View Project</button></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-overlay"></div>
+                    <img src="pictures/project-21.png" alt="Real-Estate"
+                        class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title">Real-Estate Website</h3>
+                        <p class="project-description">
+                            Find your dream property with our comprehensive real estate platform, tailored to meet your needs. Explore listings,
+                            expert insights, and personalized services that make buying or selling a home a seamless experience!
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML/CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Responsive Design</span>
+                        </div>
+                        <a href="https://nero404-dev.github.io/real-estate/"><button class="project-button">View Project</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view_more-btn">
+                <a href="portfolio.html" class="button">View All <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2 class="section-title">Services</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Here are some of the services I offer! <br>Contact for Prices.. </p>
+        </div>
+
+        <div class="cats">
+            <div class="cat">
+                <h3>Main Services</h3>
+                <div class="checked">
+                    <div class="col"><div class="left"><h4>Custom Web Development</h4><p>Tailored solutions to create responsive and engaging websites. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                    <div class="col"><div class="left"><h4>User Interface Design </h4><p>Crafting intuitive designs that enhance user experience. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                    <div class="col"><div class="left"><h4>Website Maintenance </h4><p>Ongoing support to ensure your site runs smoothly. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                </div>
+                <!-- <div class="contact">
+                    <a href="tel:+96176134251"><button>Call <i class="fa fa-phone" aria-hidden="true"></i></button></a>
+                    <a href="mailto:nero404.developer@gmail.com"><button>Email <i class="fa fa-envelope" aria-hidden="true"></i></button></a>
+                </div> -->
+            </div>
+
+            <div class="cat">
+                <h3>Additional Services</h3>
+                <div class="checked">
+                    <div class="col"><div class="left"><h4>Performance Optimization </h4><p>Improving website speed and efficiency for better user engagement. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                    <div class="col"><div class="left"><h4>Consultation Services </h4><p>Offering expert advice on best practices in web development. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                    <div class="col"><div class="left"><h4>SEO Implementation </h4><p>Enhancing your site's visibility on search engines through effective strategies. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                </div>
+            </div>
+
+            <div class="cat">
+                <h3>Specialized Programs</h3>
+                <div class="checked">
+                    <div class="col"><div class="left"><h4>Project Collaboration </h4><p>Partnering on projects to deliver innovative and effective solutions. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                    <div class="col"><div class="left"><h4>Workshops & Training </h4><p>Providing hands-on sessions to enhance your team's web development skills. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                    <div class="col"><div class="left"><h4>Code Review Services </h4><p>Thorough assessments to ensure code quality and best practices. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <!-- Background Elements -->
+        <div class="bg-elements">
+            <div class="bg-blob blob-5"></div>
+        </div>
+
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Have a question or want to work together? <br>Drop me a message! </p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p class="contact-info-p">
+                        Ready to bring your ideas to life? I'm here to help turn your vision into reality.
+                        Whether you have a project in mind or just want to say hello, feel free to reach out!
+                    </p>
+
+                    <div class="contact-details">
+                        <hr id="contact-hr">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact-text">
+                                <p class="contact-label">Email</p>
+                                <a href="mailto:nero404.developer@gmail.com"
+                                    class="contact-value">nero404.developer@gmail.com</a>
+                            </div>
+                        </div>
+                        <hr id="contact-hr">
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact-text">
+                                <p class="contact-label">Phone</p>
+                                <a href="tel:+96176134251" class="contact-value">+961 76 134 251</a>
+                            </div>
+                        </div>
+                        <hr id="contact-hr">
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact-text">
+                                <p class="contact-label">Location</p>
+                                <a href="https://maps.google.com/" class="contact-value">South Lebanon, Lebanon</a>
+                            </div>
+                        </div>
+                        <hr id="contact-hr">
+                    </div>
+
+                    <div class="social-links">
+                        <a class="social-link" href="https://www.instagram.com/nero404_dev/"><i class="fa fa-instagram"
+                                aria-hidden="true"></i></a>
+                        <a class="social-link" href="https://github.com/nero404-dev/"><i class="fa fa-github"
+                                aria-hidden="true"></i></a>
+                        <a class="social-link" href="https://wa.me/message/HHOQLBUZYZHGL1/"><i class="fa fa-whatsapp"
+                                aria-hidden="true"></i></a>
+                        <!-- <a class="social-link" href="https://www.youtube.com"><i class="fa fa-youtube-play" aria-hidden="true"></i></a> -->
+                    </div>
+                </div>
+
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="submit-button" onclick="sendMail(event)">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#hero"><div class="footer-logo">
+                    <img src="pictures/2-colored-cropped_copy-2.png" alt="Nero's Logo">
+                    <h3 class="logo">nero<span>404</span></h3>
+                </div></a>
+
+                <div class="footer-copyright">
+                    &copy; <span>2025</span> • nero404 | All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast notification container -->
+    <div id="toast-container"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1144,6 +1144,11 @@ body {
     background-color: #1aab0033;
 }
 
+.social-links .text {
+    width: 5rem;
+    font-size: 14px;
+}
+
 .contact-form {
     padding: 1.5rem;
     border-radius: 0.75rem;

@@ -12,6 +12,10 @@ function sendMail(event) {
     emailjs.send("service_duaer4t", "template_z7zga4c", params)
         .then(function(response) {
             alert("Email Sent Successfully!!");
+
+            // WhatsApp alert
+            sendWhatsAppAlert(params);
+            
         }, function(error) {
             alert("Failed to send email. Please try again.");
             console.error("Error:", error);
@@ -193,6 +197,16 @@ function scrollToSection(e) {
       behavior: 'smooth'
     });
   }
+}
+
+function sendWhatsAppAlert(params) {
+  const phone = "96176134251"; // e.g., 961XXXXXXXX
+  const message = `New form submission on Nero's Portfolio!\n---\n\nName: \n${params.name}\n---\nPhone: \n${params.phone}\n---\nEmail: \n${params.email}\n---\nSubject: \n${params.subject}\n---\nMessage: \n${params.message}\n\n---\nI'll be waiting for your response regarding my request.. \nThanks! `;
+  
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  
+  // Open WhatsApp chat in a new tab
+  window.open(url, "_blank");
 }
 
 // Handle form submit

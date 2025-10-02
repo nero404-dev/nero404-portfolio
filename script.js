@@ -53,7 +53,7 @@ const submitButton = document.getElementById('submit-btn');
 const toastContainer = document.getElementById('toast-container');
 
 // Variables
-const roles = ["Web Developer", "Front-End Dev","Designer", "Creator", "Programmer", "01 lover", "Green lover"];
+const roles = ["Web Developer", "Front-End Dev","Designer", "Creator", "Programmer", "Coding-4-Life", "01-Lover", "Green-Lover"];
 let currentRoleIndex = 0;
 let displayText = "";
 let isTyping = true;

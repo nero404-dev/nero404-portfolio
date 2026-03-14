@@ -7,13 +7,19 @@ const typingSoundFile = "typing.mp3"
 
 async function boot() {
 
-    await theMatrix("Wake up, Nero..")
+    await theMatrix("Wake up, visitor..")
+    newLine()
+    await theMatrix("It's Nero.")
+    newLine()
+    await theMatrix("known as nero404..")
     newLine()
     await theMatrix("The Matrix has you..")
     newLine()
     await theMatrix("Follow the white cat.")
     newLine()
-    await theMatrix("Knock. Knock. Nero.")
+    await theMatrix("Knock. Knock.")
+    newLine()
+    await theMatrix("Look behind your door.")
     await asciiArt(`
 ███╗   ██╗ ███████╗ ██████╗   ██████╗ 
 ████╗  ██║ ██╔════╝ ██╔══██╗ ██╔═══██╗
@@ -42,15 +48,19 @@ async function bootAfterClear() {
 
     await theMatrix("Don't ever..")
     newLine()
-    await theMatrix("I mean EVER NEVER !..")
+    await theMatrix("I mean EVER & NEVER !..")
     newLine()
-    await theMatrix("re-think of hitting clear again.")
+    await theMatrix("re-think of hitting '/clear' again.")
     newLine()
     await theMatrix("or you'll face..")
     newLine()
     await theMatrix("the most serious consequences.")
     newLine()
     await theMatrix("So, Let's Start All Over Again !!")
+    newLine()
+    await theMatrix("I'm Nero known as nero404..")
+    newLine()
+    await theMatrix("Knock. Knock. Knock!")
     await asciiArt(`
 ███╗   ██╗ ███████╗ ██████╗   ██████╗ 
 ████╗  ██║ ██╔════╝ ██╔══██╗ ██╔═══██╗

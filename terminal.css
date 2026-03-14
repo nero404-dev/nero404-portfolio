@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0c0c0c;
+    color: #00ff9c;
+    font-family: monospace;
+    margin: 0;
+    padding: 20px;
+}
+
+#terminal-screen {
+    margin: 0 0 40px 0;
+}
+
+#terminal {
+    max-width: 900px;
+    margin: auto;
+}
+
+#terminal .input-line {
+    display: flex;
+    margin-top: 5px;
+}
+
+#terminal .prompt {
+    margin-right: 8px;
+}
+
+#terminal input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #00ff9c;
+    font-family: monospace;
+    width: 100%;
+    font-size: 17px;
+}
+
+#terminal .line {
+    white-space: pre;
+}
+
+#terminal .cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}

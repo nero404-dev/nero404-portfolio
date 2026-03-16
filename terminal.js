@@ -56,6 +56,8 @@ async function bootAfterClear() {
     newLine()
     await theMatrix("the most serious consequences.")
     newLine()
+    await theMatrix("enter '/portfolio' instead :)")
+    newLine()
     await theMatrix("So, Let's Start All Over Again !!")
     newLine()
     await theMatrix("I'm Nero known as nero404..")
@@ -223,6 +225,10 @@ async function runCommand(cmd) {
             await typeLine("/contact")
             await typeLine("/portfolio")
             await typeLine("/clear")
+            await typeLine("/whoami")
+            await typeLine("/hello")
+            await typeLine("/how are you?")
+            await typeLine("/are you a human?")
             newLine()
 
             break
@@ -249,8 +255,8 @@ async function runCommand(cmd) {
             await typeLine("Access granted.")
             await typeLine("Launching portfolio interface...")
             await typeLine("")
-    
-            setTimeout(openPortfolio,800)
+
+            setTimeout(openPortfolio, 800)
             newLine()
 
             break
@@ -260,6 +266,37 @@ async function runCommand(cmd) {
             output.innerHTML = ""
             await bootAfterClear()
             newLine()
+            break
+
+        case "/whoami":
+
+            await typeLine("Don't be an idiot.")
+            await typeLine("how am i suppose")
+            await typeLine("to know who you are ?!")
+            await typeLine("loll")
+            newLine()
+
+            break
+
+        case "/hello":
+
+            await typeLine("hey. you're welcome here!")
+            newLine()
+
+            break
+
+        case "/how are you?":
+
+            await typeLine("fine. till now..")
+            newLine()
+
+            break
+
+        case "/are you a human?":
+
+            await typeLine("yes. but sometimes no :|")
+            newLine()
+
             break
 
         default:

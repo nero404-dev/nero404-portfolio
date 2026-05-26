@@ -1,26 +1,56 @@
-function sendMail(event) {
-    event.preventDefault(); // Prevent the default form submission
+// function sendMail(event) {
+//     event.preventDefault(); // Prevent the default form submission
 
-    let params = {
-        name: document.getElementById("name").value,
-        phone: document.getElementById("phone").value,
-        email: document.getElementById("email").value,
-        subject: document.getElementById("subject").value,
-        message: document.getElementById("message").value,
-    };
+//     let params = {
+//         name: document.getElementById("name").value,
+//         phone: document.getElementById("phone").value,
+//         email: document.getElementById("email").value,
+//         subject: document.getElementById("subject").value,
+//         message: document.getElementById("message").value,
+//     };
 
-    emailjs.send("service_duaer4t", "template_z7zga4c", params)
-        .then(function(response) {
-            alert("Email Sent Successfully!!");
+//     emailjs.send("service_duaer4t", "template_z7zga4c", params)
+//         .then(function(response) {
+//             alert("Email Sent Successfully!!");
 
-            // WhatsApp alert
-            sendWhatsAppAlert(params);
+//             // WhatsApp alert
+//             sendWhatsAppAlert(params);
             
-        }, function(error) {
-            alert("Failed to send email. Please try again.");
-            console.error("Error:", error);
-        });
-}
+//         }, function(error) {
+//             alert("Failed to send email. Please try again.");
+//             console.error("Error:", error);
+//         });
+// }
+
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Get values
+    const name = document.getElementById('name').value;
+    // const lastName = document.getElementById('lastName').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const userMessage = document.getElementById('message').value;
+
+    // Your WhatsApp number (IMPORTANT: use country code, no +, no spaces)
+    const whatsappNumber = "96176134251"; // <-- replace with your number
+
+    // Build message
+    const message = `Hello, I'd like to get in touch, after viewing your portfolio: \n\nName: \n${name}\n——————\n\nPhone Number: \n${phone}\n——————\n\nEmail Address: \n${email || ' - N/A - '}\n\nMessage: \n${userMessage}\n\n\n————————————————\nThank you! \n`;
+
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(message);
+
+    // Redirect to WhatsApp
+    const url = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    window.open(url, '_blank');
+
+    // Optional: reset form
+    form.reset();
+});
 
 document.getElementById('searchForm').addEventListener('submit', function (e) {
     e.preventDefault(); // Prevent the default form submission

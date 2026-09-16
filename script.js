@@ -68,7 +68,7 @@ form.addEventListener('submit', function (e) {
     const userMessage = document.getElementById('message').value;
 
     // WhatsApp number
-    const whatsappNumber = "96170123456";
+    const whatsappNumber = "96176134251";
 
     // Build message
     const message = `Hello, I'd like to get in touch, after viewing your portfolio:

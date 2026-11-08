@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Nero ~ Front-End Web Developer & Web Designer — nero404's Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="pictures/2-colored-cropped-white_bg-bordered.png">
+</head>
+
+<body>
+    <div class="body" id="top">
+        <!-- header -->
+        <header>
+            <div class="header-btns back-btn">
+                <a href="index.html"><button><i class="fa fa-angle-left" aria-hidden="true"></i> Home</button></a>
+            </div>
+            <div class="header-btns adjust-btn">
+                <button id="theme-toggle">Switch to Light Mode</button>
+            </div>
+        </header>
+
+        <div id="shadow_hr"></div>
+
+        <!-- main -->
+        <main>
+            <h1>Portfolio</h1>
+            <p id="searchResult"></p>
+
+            <div class="toolbars">
+                <div class="toolbar filter-toolbar">
+                    <label for="project-filter">Filter Projects</label>
+
+                    <select id="project-filter">
+                        <option value="all" selected>All</option>
+                        <option value="portfolio">Portfolio</option>
+                        <option value="web-app">Web App</option>
+                        <option value="ecommerce">Ecommerce</option>
+                    </select>
+                </div>
+
+                <div class="toolbar portfolio-toolbar">
+                    <label for="grid-columns">Projects per row</label>
+
+                    <select id="grid-columns">
+                        <option value="1">1 project</option>
+                        <option value="2">2 projects</option>
+                        <option value="3" selected>3 projects</option>
+                        <option value="4">4 projects</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="projects-container"></div>
+
+        </main>
+
+        <footer>
+            <div class="top-btn">
+                <a href="#top" title="Top Page"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+            </div>
+            <div class="copyright">
+                <p>Designed & Developed By "nero404" <br><i class="fa fa-copyright" aria-hidden="true"></i> 2025 | All
+                    Rights Reserved</p>
+            </div>
+        </footer>
+
+        <script src="projects.js"></script>
+
+        <!-- adjust dark -> light mode -->
+        <script>
+            // Select the toggle button
+            const themeToggleButton = document.getElementById('theme-toggle');
+
+            // Add an event listener to the button
+            themeToggleButton.addEventListener('click', () => {
+                // Toggle the 'light-mode' class on the body
+                document.body.classList.toggle('light-mode');
+
+                // Update the button text based on the current mode
+                if (document.body.classList.contains('light-mode')) {
+                    themeToggleButton.textContent = 'Switch to Dark Mode';
+                } else {
+                    themeToggleButton.textContent = 'Switch to Light Mode';
+                }
+            });
+
+
+            // const githubProfileLink = "https://github.com/nero404-dev/";
+            const projectsContainer = document.getElementById('projects-container');
+            // JavaScript to handle the search query and display relevant sections
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchQuery = urlParams.get('search'); // Get the 'search' parameter from the URL
+
+            // Display the search query
+            const searchResult = document.getElementById('searchResult');
+            if (searchQuery) {
+                searchResult.innerHTML = `<div class="search-result">You searched for: "${searchQuery}" <a href="portfolio.html"><button class="view_all-btn">View Other Projects</button></a></div>`;
+            } else {
+                searchResult.textContent = "Explore my projects!";
+            }
+
+
+            function renderProjects(projectList) {
+
+                projectsContainer.innerHTML = '';
+
+                projectList.forEach(project => {
+
+                    const projectSection = document.createElement('section');
+                    projectSection.className = 'courses';
+
+                    const preview = project.darkmode
+                        ? `
+            <div class="project-preview dual-preview">
+                <img
+                    class="preview-light"
+                    src="${project.lightImage}"
+                    alt="${project.title} — light mode"
+                    loading="lazy"
+                >
+                <img
+                    class="preview-dark"
+                    src="${project.darkImage}"
+                    alt="${project.title} — dark mode"
+                    loading="lazy"
+                >
+                <span class="mode-label light-label">LIGHT</span>
+                <span class="mode-label dark-label">DARK</span>
+            </div>
+        `
+                        : `
+            <div class="project-preview single-preview">
+                <img
+                    src="${project.image}"
+                    alt="${project.title}"
+                    loading="lazy"
+                >
+            </div>
+        `;
+
+                    projectSection.innerHTML = `
+        ${preview}
+
+        <div class="project-content">
+            <h2>${project.title}</h2>
+
+            <p>${project.description}</p>
+
+            <h4>Type: ${project.type}</h4>
+
+            <div class="project-links">
+                <a href="${project.liveLink}"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <i class="fa fa-external-link"></i>
+                    View Project
+                </a>
+
+                <a href="${project.githubProfileLink}"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <i class="fa fa-github"></i>
+                    GitHub Repo
+                </a>
+            </div>
+        </div>
+    `;
+
+                    projectsContainer.appendChild(projectSection);
+
+                });
+
+            }
+
+            renderProjects(projects);
+
+            /* PROJECT FILTER */
+
+                const projectFilter = document.getElementById('project-filter');
+
+                projectFilter.addEventListener('change', () => {
+                    const selectedType = projectFilter.value;
+
+                    const filteredProjects = selectedType === 'all'
+                        ? projects
+                        : projects.filter(project => project.type === selectedType);
+
+                    // renderProjects(filteredProjects);
+
+                    if (filteredProjects.length === 0) {
+                        projectsContainer.innerHTML = '<p class="no-projects">No projects found!</p>';
+                    } else {
+                        renderProjects(filteredProjects);
+                    }
+                });
+
+
+            /* GRID COLUMN SELECTOR */
+            const gridColumns = document.getElementById('grid-columns');
+
+            function updateGridColumns(columns) {
+                projectsContainer.style.setProperty('--project-columns', columns);
+            }
+
+            // Default: 1 column on mobile, 3 columns on desktop
+            const isMobile = window.matchMedia('(max-width: 520px)').matches;
+
+            gridColumns.value = isMobile ? '1' : '3';
+            updateGridColumns(gridColumns.value);
+
+            // Update layout when the user changes the selection
+            gridColumns.addEventListener('change', () => {
+                updateGridColumns(gridColumns.value);
+            });
+
+
+            /* PROJECT IMAGE LIGHTBOX */
+            const imageModal = document.createElement('div');
+            imageModal.className = 'image-modal';
+
+            imageModal.innerHTML = `
+    <button class="image-modal-close"
+            type="button"
+            aria-label="Close image preview">
+        &times;
+    </button>
+
+    <div class="image-modal-content"></div>
+
+    <p class="image-modal-hint">
+        Click outside or press ESC to close
+    </p>
+`;
+
+            document.body.appendChild(imageModal);
+
+            const imageModalContent =
+                imageModal.querySelector('.image-modal-content');
+
+            function closeImageModal() {
+                imageModal.classList.remove('is-open');
+                document.body.classList.remove('modal-open');
+                imageModalContent.replaceChildren();
+            }
+
+            projectsContainer.addEventListener('click', event => {
+                const preview = event.target.closest('.project-preview');
+
+                if (!preview) return;
+
+                // Copy the existing preview, including both triangle images
+                const expandedPreview = preview.cloneNode(true);
+
+                imageModalContent.replaceChildren(expandedPreview);
+
+                imageModal.classList.add('is-open');
+                document.body.classList.add('modal-open');
+            });
+
+            imageModal.addEventListener('click', event => {
+                if (
+                    event.target === imageModal ||
+                    event.target.closest('.image-modal-close')
+                ) {
+                    closeImageModal();
+                }
+            });
+
+            document.addEventListener('keydown', event => {
+                if (
+                    event.key === 'Escape' &&
+                    imageModal.classList.contains('is-open')
+                ) {
+                    closeImageModal();
+                }
+            });
+
+
+            // Get all course sections
+            const courseSections = document.querySelectorAll('section.courses');
+
+            // Convert the search query to lowercase for case-insensitive matching
+            const lowerCaseQuery = searchQuery?.toLowerCase() || "";
+
+            // Log the search query and project titles for debugging
+            console.log("Search Query:", lowerCaseQuery);
+            console.log("Project Titles:");
+            projects.forEach(project => console.log(project.title.toLowerCase())); // Log each project title
+
+            // Loop through each section and toggle visibility based on the search query
+            let foundMatch = false;
+            courseSections.forEach((section) => {
+                const sectionTitle = section.querySelector('h2').textContent.toLowerCase(); // Get the section title
+                console.log("Checking section:", sectionTitle); // Log each section title
+                if (sectionTitle.includes(lowerCaseQuery)) {
+                    section.style.display = "block"; // Show the section if it matches the query
+                    foundMatch = true;
+                } else {
+                    section.style.display = "none"; // Hide the section if it doesn't match
+                }
+            });
+
+            // If no matches are found, display a message
+            if (!foundMatch && searchQuery) {
+                searchResult.innerHTML = `<div class="search-result">You searched for: "${searchQuery}" - No matching project found. <a href="portfolio.html"><button class="view_all-btn">View All Projects</button></a></div>`;
+            }
+
+
+        </script>
+    </div>
+</body>
+
+</html>
